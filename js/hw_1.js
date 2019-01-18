@@ -1,12 +1,12 @@
-// // // Задача 1.
+// // Задача 1.
 
-// let a = document.body.querySelector('p').textContent; 
+let a = document.body.querySelector('p').textContent; 
 
-// console.log(`${a}`);
+console.log(`${a}`);
+
+
 
 // // Задача 3.
-
-
 
 
 let getTextFromUl = (ul) => {
@@ -21,33 +21,13 @@ console.log(l);
 
 
 
+// // Задача 4.
 
 
-// // // Задача 4.
+let x = '';
 
+document.body.querySelector('div article p').childNodes.forEach((node) => {
+    x += node.nodeType === 3 ?"-text-" : node.outerHTML;
+});
 
-// let x = '';
-
-// document.body.querySelector('div article p').childNodes.forEach((node) => {
-//     x += node.nodeType === 3 ?"-text-" : node.outerHTML;
-// });
-
-// document.body.querySelector('div article p').innerHTML = x;    
-
-
-
-// /**
-//  *
-//  * @param {element} ul
-//  * @returns {array}
-//  */
-// const getTextFromUl = (ul) => {
-//     // if (!ul || ul.tagName !== "UL") return false;
-//     let aList = Array.prototype.slice.call(ul.querySelectorAll("a"));
-//     return aList.map((a) => {return a.textContent});
-// };
-
-// let ul = document.body.querySelector("ul");
-// let aList = getTextFromUl(ul);
-
-// console.log(aList);
+document.body.querySelector('div article p').innerHTML = x;    
